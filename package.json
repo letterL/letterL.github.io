@@ -12,7 +12,8 @@
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "submit": "git add . & git commit -m update_title & git push"
   },
   "license": "MIT",
   "devDependencies": {

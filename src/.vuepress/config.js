@@ -28,12 +28,17 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    lang: 'zh-CN',
     repo: '',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
     nav: [
+      {
+        text: '_posts',
+        link: '/_posts/',
+      },
       {
         text: 'Guide',
         link: '/guide/',

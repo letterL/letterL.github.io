@@ -8,7 +8,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  description: 'Just playing around',
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -28,21 +28,32 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    lang: 'zh-CN',
     repo: '',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     
-    // 头像
-    avatar: '/assets/img/tx.jpg',
+    
+      // 头像
+      avatar: '/assets/img/head.svg',
+    // 上方 header 的相关设置
+    header: {
+      // header 的背景，可以使用图片，或者随机变化的图案（geopattern）
+      background: {
+        // 使用图片的 URL，如果设置了图片 URL，则不会生成随机变化的图案，下面的 useGeo 将失效
+        url: '/assets/img/background.svg',
+        // 使用随机变化的图案，如果设置为 false，且没有设置图片 URL，将显示为空白背景
+          useGeo: false,
+      },
+
+      // 是否在 header 显示标题
+      showTitle: true,
+    },
 
     nav: [
-      {
-        text: '文章',
-        link: '/_posts/',
-      },
+
+      { text: '文章', link: '/docs/', exact: false},
       {
         text: 'Guide',
         link: '/guide/',
@@ -55,19 +66,8 @@ module.exports = {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
       }
-    ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    ]
+
   },
 
   /**

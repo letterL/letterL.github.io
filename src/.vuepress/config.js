@@ -34,9 +34,9 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-
+    
     // 头像
-    avatar: 'https://s3.ax1x.com/2021/01/18/s6J1A0.jpg',
+    avatar: '/assets/img/tx.jpg',
 
     nav: [
       {
